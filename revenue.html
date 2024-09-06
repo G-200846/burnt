@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Office - Burnt-Forest Hospital</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Revenue Office</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="nhif.html">NHIF Office</a></li>
+            <li><a href="wards.html">Ward Data</a></li>
+            <li><a href="maternity.html">Maternity Section</a></li>
+            <li><a href="lab.html">Lab Data</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Revenue Data</h2>
+            <form id="revenue-form">
+                <label for="amount">Amount Collected:</label>
+                <input type="number" id="amount" name="amount" required><br><br>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Burnt-Forest Sub County Hospital</p>
+    </footer>
+
+    <script>
+        document.getElementById("revenue-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const amount = document.getElementById("amount").value;
+            const date = document.getElementById("date").value;
+            alert(`Revenue Collected: ${amount} on ${date}`);
+        });
+    </script>
+</body>
+</html>

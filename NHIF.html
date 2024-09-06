@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHIF Office - Burnt-Forest Hospital</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>NHIF Office</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="revenue.html">Revenue Office</a></li>
+            <li><a href="wards.html">Ward Data</a></li>
+            <li><a href="maternity.html">Maternity Section</a></li>
+            <li><a href="lab.html">Lab Data</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>NHIF Claims</h2>
+            <form id="nhif-form">
+                <label for="patient-id">Patient ID:</label>
+                <input type="text" id="patient-id" name="patient-id" required><br><br>
+
+                <label for="claim-amount">Claim Amount:</label>
+                <input type="number" id="claim-amount" name="claim-amount" required><br><br>
+
+                <input type="submit" value="Submit Claim">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Burnt-Forest Sub County Hospital</p>
+    </footer>
+
+    <script>
+        document.getElementById("nhif-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const patientId = document.getElementById("patient-id").value;
+            const claimAmount = document.getElementById("claim-amount").value;
+            alert(`Claim Submitted for Patient ID: ${patientId}, Amount: ${claimAmount}`);
+        });
+    </script>
+</body>
+</html>

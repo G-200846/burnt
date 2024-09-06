@@ -1,0 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Burnt-Forest Hospital System Loaded");
+    // Additional JavaScript for functionality like form submission or data visualization
+});
